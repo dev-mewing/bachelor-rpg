@@ -9,6 +9,16 @@ import Agenda from '../pages/Agenda.vue'
 
 const routes = [
   {
+    path: '/index.html',
+    redirect: '/login',
+    name: Login
+  },
+  {
+    path: '/home',
+    redirect: '/login',
+    name: Login
+  },
+  {
     path: '/',
     redirect: '/login',
     name: 'home'
