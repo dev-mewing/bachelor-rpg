@@ -1,0 +1,35 @@
+@import 'globals.css';
+@import 'tokens.css';
+
+body {
+  min-height: 100dvh;
+  background-color: #e0d4b8;
+  font-family: var(--font-para);
+  /* background-image: url('../assets/images/brand/border.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom; */
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--space-md);
+}
+
+h1, h2 {
+  font-family: var(--font-body);
+  color: var(--color-primary);
+}
+
+hr {
+  border-bottom: 2px solid #065004;
+  margin: 0 0 1rem 0;
+}
+
+p {
+  margin-bottom: var(--space-md);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+}
+

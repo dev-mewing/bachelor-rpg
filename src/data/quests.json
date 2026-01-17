@@ -1,0 +1,62 @@
+[
+  {
+    "id": 2001,
+    "title": "The Adventure Begins",
+    "description":  "A rogue bachelor has requested your presence for a weekend of quests and celebrations.",
+    "location": "17450 Southpark Center Blvd, Strongsville, OH 44136",
+    "rewardExp": 2,
+    "time": "6:30 pm",
+    "endTime": "10:00 pm",
+    "date": "1/23/2026"
+  },
+  {
+    "id": 2002,
+    "title": "Top Golf",
+    "description": "Swing into action and hone your physical combat skills.",
+    "location": "5820 Rockside Rd, Independence, OH 44131",
+    "rewardExp": 2,
+    "time": "10:00 am",
+    "endTime": "12:00 pm",
+    "date": "1/24/2026"
+  },
+  {
+    "id": 2003,
+    "title": "Men's Wearhouse",
+    "description": "Knights need armor, mages their robes and rogues their leather. Visit the armorer for a proper fit.",
+    "location": "17230 Royalton Rd, Strongsville, OH 44136",
+    "rewardExp": 2,
+    "time": "2:00 pm",
+    "endTime": "4-5:00 pm",
+    "date": "1/24/2026"
+  },
+  {
+    "id": 2004,
+    "title": "MTG Draft",
+    "description": "An adventurer must always sharpen their skills and spells.",
+    "location": "14113 Elsetta Ave, Cleveland, OH 44135",
+    "rewardExp": 2,
+    "time": "5:00 pm",
+    "endTime": "9:00 pm",
+    "date": "1/24/2026"
+  },
+  {
+    "id": 2005,
+    "title": "Explore the Continent",
+    "description": "The party gathers to explore the unknown lands ahead.",
+    "location": "TBD",
+    "rewardExp": 2,
+    "time": "9:00 pm",
+    "endTime": "11:00 pm",
+    "date": "1/24/2026"
+  },
+  {
+    "id": 2006,
+    "title": "Breakfast Feast",
+    "description": "Adventurers need fuel! Enjoy a hearty breakfast to start your day.",
+    "location": "TBD",
+    "rewardExp": 2,
+    "time": "9:00 am",
+    "endTime": "11:00 am",
+    "date": "1/25/2026"
+  }
+]
