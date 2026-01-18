@@ -1,6 +1,7 @@
 <script setup>
 import User from '@/components/ui/User.vue';
 import TapGame from '@/components/quests/TapGame.vue';
+
 </script>
 <template>
   <div id="dashboard" class="container" style="height: 100vh;">

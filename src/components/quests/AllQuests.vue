@@ -1,7 +1,6 @@
 <script setup>
   import { computed, onMounted } from 'vue';
   import { usePlayerStore } from '../../stores/player'
-  import QuestDetail from './QuestDetail.vue';
 
   const playerStore = usePlayerStore()
 
@@ -31,7 +30,7 @@
       <li v-for="quest in fridayEvents" :key="quest.id" class="all-quests-quest">
         <div class="quest-details">
           <div class="quest-details-left">
-            <a href="">
+            <a :href="`/details/${quest.id}`">
               <span class="quest-title">{{ quest.title }}</span>
               <span class="fa fa-external-link"></span>
             </a>
@@ -42,8 +41,6 @@
             <a :href="`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(quest.location)}`" target="_blank" rel="noopener noreferrer"><span class="icono fa fa-map" title="View location on map"></span></a>
           </div>
         </div>
-        <button type="button" @click="openModal">Details</button>
-        <QuestDetail :quest="quest" :isOpen="false"/>
       </li>
     </ul>
     <h2>Sat. Jan 24</h2>
@@ -51,7 +48,7 @@
       <li v-for="quest in saturdayEvents" :key="quest.id" class="all-quests-quest">
         <div class="quest-details">
           <div class="quest-details-left">
-            <a href="">
+            <a :href="`/details/${quest.id}`">
               <span class="quest-title">{{ quest.title }}</span>
               <span class="fa fa-external-link"></span>
             </a>
@@ -69,7 +66,10 @@
       <li v-for="quest in sundayEvents" :key="quest.id" class="all-quests-quest">
         <div class="quest-details">
           <div class="quest-details-left">
-            <span class="quest-title">{{ quest.title }}</span>
+            <a :href="`/details/${quest.id}`">
+              <span class="quest-title">{{ quest.title }}</span>
+              <span class="fa fa-external-link"></span>
+            </a>
             <span class="quest-desc">{{ quest.description }}</span>
           </div>
           <div class="quest-details-right">

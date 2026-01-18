@@ -1,7 +1,5 @@
 <script setup>
 
-  import Modal from '../ui/Modal.vue';
-
   defineProps({
     quest: {
       type: Object,
@@ -15,7 +13,9 @@
   const emit = defineEmits(['close']);
 </script>
 <template>
-  <Modal :data="quest" :title="quest.title" :visible="isOpen" @close="emit('close')" />
+  <div class="container">
+    <div>{{ quest.title }}</div>
+  </div>
 </template>
 <style scoped>
 

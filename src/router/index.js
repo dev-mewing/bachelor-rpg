@@ -6,6 +6,7 @@ import Login from '../pages/Login.vue'
 import Dashboard from '../pages/Dashboard.vue'
 import Quests from '../pages/Quests.vue'
 import Agenda from '../pages/Agenda.vue'
+import Details from '../pages/Details.vue'
 
 const routes = [
   {
@@ -43,6 +44,11 @@ const routes = [
     path: '/agenda',
     name: 'agenda',
     component: Agenda,
+  },
+  {
+    path: '/details/:id',
+    name: 'details',
+    component: Details,
   }
 ]
 

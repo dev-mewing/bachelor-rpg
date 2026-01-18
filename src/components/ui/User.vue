@@ -14,6 +14,8 @@
   <div class="user-info">
     <div class="player-name">{{ playerStore.name }}</div>
     <div class="player-points">
+      <span class="score">CURRENT QUEST</span><br>
+      <span class="score">{{ playerStore.currentQuest ? playerStore.currentQuest.title : 'N/A' }}</span><br>
       <span class="score">SCORE</span><br>
       <span class="points">{{ playerStore.points }}</span>&nbsp;
       <span class="fa fa-ruble"></span>
@@ -23,7 +25,7 @@
     <div class="player-level">
       <div class="level-ball">
         <span class="lvlLabel">LVL</span>
-        <span>{{ playerStore.level }}</span>
+        <span class="actualLevel">{{ playerStore.level }}</span>
       </div>
     </div>
     <div class="level-up">
@@ -42,7 +44,7 @@
     gap: 0.5rem;
     font-size: 1.2rem;
     padding: 0 0 0.5rem 0;
-    background-color: #f0f0f0;
+    background-color: #fff;
     border-radius: 8px;
     line-height: 1.4;
     box-shadow: var(--shadow-panel);
@@ -71,6 +73,10 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
     padding: 0.5rem 0;
+    gap: 0.5rem;
+  }
+  .actualLevel {
+    font-size: 1.2rem;
   }
   .lvlLabel {
     font-size: .6rem;
@@ -81,21 +87,25 @@
     align-items: center;
   }
   .level-ball {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     text-align: center;
     border: 1px solid transparent;
     background-color: #fff;
     aspect-ratio: 1/1;
-    border-radius: 50%;
     justify-content: center;
     box-shadow: var(--shadow-panel);
+    border-radius: 8px;
   }
 
   .level-up {
     display: flex;
     align-items: center;
+    background-color: #fff;
+    padding: 0 1rem;
+    box-shadow: var(--shadow-panel);
+    border-radius: 8px;
   }
   .level-up-indicator {
     background-color: transparent;

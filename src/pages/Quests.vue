@@ -16,6 +16,7 @@
     <div class="tab-controls">
       <div class="tabs">
       <button
+        type="button"
         class="tab-btn"
         :class="{ active: currentTab === 'allQuests' }" 
         @click="changeTab('allQuests')"
@@ -23,6 +24,7 @@
         All
       </button>
       <button
+        type="button"
         class="tab-btn" 
         :class="{ active: currentTab === 'currentQuest' }" 
         @click="changeTab('currentQuest')"
@@ -30,6 +32,7 @@
         Current
       </button>
       <button 
+        type="button"
         class="tab-btn"
         :class="{ active: currentTab === 'questList' }" 
         @click="changeTab('questList')"

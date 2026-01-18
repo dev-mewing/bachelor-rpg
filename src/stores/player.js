@@ -18,6 +18,10 @@ export const usePlayerStore = defineStore('player', {
 
   getters: {
 
+    getCurrentQuest() {
+      return this.currentQuest ? this.currentQuest : 'No active quest'
+    },
+
     levelInfo() {
       return levelSystem.getLevelInfo(this.xp, this.level);
     },
@@ -40,7 +44,7 @@ export const usePlayerStore = defineStore('player', {
 
     setCurrentQuest(questId) {
       this.currentQuest = this.allQuests.find(quest => quest.id === questId) || null
-      localStorage.setItem('currentQuestId', questId)
+      localStorage.setItem('currentQuest', questId)
     },
 
     awardPoints(points) {
@@ -89,9 +93,9 @@ export const usePlayerStore = defineStore('player', {
       const savedLevel = localStorage.getItem('playerLevel')
       if (savedLevel) this.level = parseInt(savedLevel)
 
-      const savedCurrentQuestId = localStorage.getItem('currentQuestId')
-      if (savedCurrentQuestId) {
-        this.setCurrentQuest(savedCurrentQuestId)
+      const savedCurrentQuest = localStorage.getItem('currentQuest')
+      if (savedCurrentQuest) {
+        this.setCurrentQuest(savedCurrentQuest)
       }
     }
   }
