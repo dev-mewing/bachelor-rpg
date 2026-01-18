@@ -57,6 +57,7 @@ loadPlayerData()
     background 0.2s ease;
 
   touch-action: manipulation;
+  user-select: none;
 }
 
 .rpg-btn:hover {
