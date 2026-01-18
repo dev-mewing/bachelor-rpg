@@ -18,7 +18,9 @@ loadPlayerData()
     <!-- <div class="play-area">
       <div class="monster-area"></div>
     </div> -->
-    <button type="button" @click="playerStore.addClickPoints()" class="rpg-btn">Tap</button>
+    <button type="button" @click="playerStore.addClickPoints()" class="rpg-btn">
+      Tap
+    </button>
   </section>
 </template>
 <style scoped>
@@ -26,21 +28,21 @@ loadPlayerData()
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 1.5rem;
+    bottom: 1rem;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 .rpg-btn {
-  padding: 1rem 1.5rem;
+  padding: 1.5rem;
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: 0.5px;
   width: 100%;
   max-width: 300px;
 
-  background: linear-gradient(180deg, #3b2f2f, #2a1f1f);
+  background: linear-gradient(180deg, rgba(59, 47, 47), rgba(47, 36, 36));
   color: #f5e6c8;
 
   border: 2px solid #c9a86a;
