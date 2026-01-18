@@ -12,11 +12,11 @@
 </script>
 <template>
   <div class="container menu-container">
-    <img src="@/assets/images/brand/brpg-logo.svg" alt="Bachelor RPG Logo" width="45" />
-    <button @click="isOpen = !isOpen">
+    <img src="@/assets/images/brand/bachelor-rpg-logo-trans.png" alt="Bachelor RPG Logo" width="45" />
+    <button type="button" @click="isOpen = !isOpen">
       <span class="fa fa-bars" title="Open menu"></span>
     </button>
-    <Menu :isOpen="isOpen" @close="closeMenu"/>
+    <Menu :isOpen="isOpen" @close="closeMenu" />
   </div>
 </template>
 

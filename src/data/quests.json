@@ -8,8 +8,7 @@
     "time": "6:30 pm",
     "endTime": "10:00 pm",
     "date": "1/23/2026",
-    "detailImage": "adventure_begins.jpg",
-    "detailInfo": "Lord of the Rings: 25th Anniversary Fellowship of the Ring - Cinemark" 
+    "detailInfo": "Kick off the festivities with Lord of the Rings: 25th Anniversary Fellowship of the Ring - Cinemark" 
   },
   {
     "id": 2002,
@@ -19,8 +18,7 @@
     "rewardExp": 1000,
     "time": "10:00 am",
     "endTime": "12:00 pm",
-    "date": "1/24/2026",
-    "detailImage": "adventure_begins.jpg"
+    "date": "1/24/2026"
   },
   {
     "id": 2003,
@@ -30,8 +28,7 @@
     "rewardExp": 1000,
     "time": "2:00 pm",
     "endTime": "4-5:00 pm",
-    "date": "1/24/2026",
-    "detailImage": "adventure_begins.jpg"
+    "date": "1/24/2026"
   },
   {
     "id": 2004,
@@ -41,8 +38,7 @@
     "rewardExp": 1000,
     "time": "5:00 pm",
     "endTime": "9:00 pm",
-    "date": "1/24/2026",
-    "detailImage": "adventure_begins.jpg"
+    "date": "1/24/2026"
   },
   {
     "id": 2005,
@@ -52,8 +48,7 @@
     "rewardExp": 1000,
     "time": "9:00 pm",
     "endTime": "11:00 pm",
-    "date": "1/24/2026",
-    "detailImage": "adventure_begins.jpg"
+    "date": "1/24/2026"
   },
   {
     "id": 2006,
@@ -63,7 +58,6 @@
     "rewardExp": 1000,
     "time": "9:00 am",
     "endTime": "11:00 am",
-    "date": "1/25/2026",
-    "detailImage": "adventure_begins.jpg"
+    "date": "1/25/2026"
   }
 ]

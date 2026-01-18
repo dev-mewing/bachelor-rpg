@@ -111,7 +111,7 @@
     text-align: left;
   }
   .quest-details-right {
-    text-align: center;
+    text-align: right;
   }
   .quest-title {
     font-size: 1rem;

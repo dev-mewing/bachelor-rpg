@@ -29,7 +29,9 @@
     <hr />
     <div class="quest-full-detail" v-if="questDetail.length > 0">
       <h2>{{ questDetail[0].title }}</h2>
+      <img :src="`../src/assets/images/quests/${questDetail[0].id}.jpg`" :alt="questDetail[0].title" />
       <p><strong>Description:</strong> {{ questDetail[0].description }}</p>
+      <p v-if="questDetail[0].detailInfo"><strong>Additional Info:</strong> {{ questDetail[0].detailInfo }}</p>
       <p><strong>Date:</strong> {{ questDetail[0].date }}</p>
       <p><strong>Time:</strong> {{ questDetail[0].time }} - {{ questDetail[0].endTime }}</p>
       <p><strong>Location:</strong> {{ questDetail[0].location }}</p>
@@ -67,5 +69,12 @@
     padding: 0.5rem;
     text-align: center;
     margin-bottom: 1rem;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 8px;
   }
 </style>

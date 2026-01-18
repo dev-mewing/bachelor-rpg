@@ -25,8 +25,8 @@ onMounted(() => {
 <template>
   <div class="container" style="height: 100vh;">
     <div class="login-form">
-      <img src="../assets/images/brand/brpg-logo.svg" alt="Bachelor RPG Logo" width="220" />
-      <h1>Bachelor RPG</h1>
+      <img src="../assets/images/brand/bachelor-rpg-logo-trans.png" alt="Bachelor RPG Logo" width="220" />
+      <h1>Celebrating<br>Mitch!</h1>
       <div class="field">
         <label for="login-name">Adventurer name:</label>
         <input type="text" id="login-name" name="login-name" v-model="name" placeholder="Will the Wise" />
@@ -46,6 +46,7 @@ onMounted(() => {
   }
   .login-form h1 {
     margin: 1rem auto 2rem;
+    text-align: center
   }
   .login-form input {
     width: 100%;
