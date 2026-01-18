@@ -9,8 +9,6 @@
   const questDetail = Quests.filter(q => q.id == questId);
   const playerStore = usePlayerStore();
 
-  console.log("quest detail from Details", questDetail);
-
   const loadPlayerData = () => {
     playerStore.loadFromStorage();
   }; 
@@ -20,7 +18,7 @@
   });
 
  const completedQuests = playerStore.questsCompleted;
- console.log("Completed from Details", completedQuests);
+
 
 </script>
 <template>
