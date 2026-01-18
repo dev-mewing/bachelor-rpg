@@ -2,7 +2,7 @@
   <div v-if="visible" class="modal-overlay" @click.self="close">
     <div class="modal-content">
       <button class="modal-close" @click="close">×</button>
-      <h2>{{ title }}</h2>
+      <h3>{{ title }}</h3>
       <pre>{{ formattedData }}</pre>
       <slot></slot>
     </div>

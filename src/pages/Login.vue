@@ -25,6 +25,7 @@ onMounted(() => {
 <template>
   <div class="container" style="height: 100vh;">
     <div class="login-form">
+      <img src="../assets/images/brand/brpg-logo.svg" alt="Bachelor RPG Logo" width="220" />
       <h1>Bachelor RPG</h1>
       <div class="field">
         <label for="login-name">Adventurer name:</label>

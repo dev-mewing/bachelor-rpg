@@ -1,6 +1,8 @@
 <script setup>
   import { computed, onMounted } from 'vue';
   import { usePlayerStore } from '../../stores/player'
+  import QuestDetail from './QuestDetail.vue';
+
   const playerStore = usePlayerStore()
 
   onMounted(() => {
@@ -40,6 +42,8 @@
             <a :href="`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(quest.location)}`" target="_blank" rel="noopener noreferrer"><span class="icono fa fa-map" title="View location on map"></span></a>
           </div>
         </div>
+        <button type="button" @click="openModal">Details</button>
+        <QuestDetail :quest="quest" :isOpen="false"/>
       </li>
     </ul>
     <h2>Sat. Jan 24</h2>
@@ -90,12 +94,15 @@
     padding: 0;
     margin: 0 0 2rem 0;
   }
+  .all-quests-quest  {
+    border-bottom: 1px solid #065004;
+    padding-bottom: 0.5rem;
+  }
   .quest-details {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1rem;
     padding: 0.5rem 0;
-    border-bottom: 1px solid #065004;
     align-items: center;
   }
   .quest-details-left {

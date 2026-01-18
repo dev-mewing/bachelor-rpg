@@ -12,6 +12,7 @@
 </script>
 <template>
   <div class="container menu-container">
+    <img src="@/assets/images/brand/brpg-logo.svg" alt="Bachelor RPG Logo" width="45" />
     <button @click="isOpen = !isOpen">
       <span class="fa fa-bars" title="Open menu"></span>
     </button>
@@ -22,6 +23,6 @@
 <style scoped>
   .menu-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
   }
 </style>

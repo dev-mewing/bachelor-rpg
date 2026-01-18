@@ -36,6 +36,12 @@ export const usePlayerStore = defineStore('player', {
       localStorage.setItem('playerXp', this.xp)
     },
 
+    addCompletedQuest(questId) {
+      if (!this.questsCompleted.includes(questId)) {
+        this.questsCompleted.push(questId)
+      }
+    },
+
     loadFromStorage() {
       const savedName = localStorage.getItem('playerName')
       if (savedName) this.name = savedName

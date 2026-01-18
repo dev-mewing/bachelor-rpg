@@ -2,8 +2,8 @@
   import ToggleMenu from './components/ui/ToggleMenu.vue';
 </script>
 <template>
-  <div id="app">
+  <main id="appVue">
     <ToggleMenu />
     <router-view />
-  </div>
+  </main>
 </template>
