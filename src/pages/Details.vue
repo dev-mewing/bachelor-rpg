@@ -27,13 +27,13 @@
       <p><strong>Location:</strong> {{ questDetail[0].location }}</p>
       <p><strong>Reward:</strong> {{ questDetail[0].rewardExp }} points</p>
       <div class="setActiveQuest">
-        <button type="button" @click="setCurrentQuest">Set as Active Quest</button>
+        <button type="button" @click="setCurrentQuest">Set Active Quest</button>
       </div>
     </div>
     <div v-else>
       <p>No quest found. Go to the Quest List to get it's details.</p>
     </div>
-    <div><a href="/quests">Back to All Quests</a></div>
+    <div class="back"><a href="/quests">Back to All Quests</a></div>
   </div>
 </template>
 <style scoped>
@@ -43,5 +43,12 @@
   }
   a {
     color: purple;
+  }
+  .setActiveQuest {
+    margin-bottom: 1rem;
+  }
+  .back {
+    display: flex;
+    justify-content: flex-end;
   }
 </style>
