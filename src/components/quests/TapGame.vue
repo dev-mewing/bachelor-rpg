@@ -18,7 +18,7 @@ loadPlayerData()
     <!-- <div class="play-area">
       <div class="monster-area"></div>
     </div> -->
-    <button @click="playerStore.addClickPoints()" class="rpg-btn">Tap</button>
+    <button type="button" @click="playerStore.addClickPoints()" class="rpg-btn">Tap</button>
   </section>
 </template>
 <style scoped>
@@ -55,6 +55,8 @@ loadPlayerData()
     transform 0.1s ease,
     box-shadow 0.2s ease,
     background 0.2s ease;
+
+  touch-action: manipulation;
 }
 
 .rpg-btn:hover {
