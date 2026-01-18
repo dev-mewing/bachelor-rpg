@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "title": "Buy the bachelor a drink",
+    "rewardExp": 50,
+    "isComplete": false
+  },
+  {
+    "id": 2,
+    "title": "Tell a funny story involving the bachelor",
+    "rewardExp": 50,
+    "isComplete": false
+  },
+  {
+    "id": 3,
+    "title": "Help the bachelor with a task",
+    "rewardExp": 50,
+    "isComplete": false
+  },
+  {
+    "id": 4,
+    "title": "Give the bachelor a compliment",
+    "rewardExp": 50,
+    "isComplete": false
+  },
+  {
+    "id": 5,
+    "title": "Take a photo with the bachelor",
+    "rewardExp": 50,
+    "isComplete": false
+  },
+  {
+    "id": 6,
+    "title": "Dance with the bachelor",
+    "rewardExp": 50,
+    "isComplete": false
+  },
+  {
+    "id": 7,
+    "title": "Sing a song for the bachelor",
+    "rewardExp": 50,
+    "isComplete": false
+  },
+  {
+    "id": 8,
+    "title": "Share a secret with the bachelor",
+    "rewardExp": 50,
+    "isComplete": false
+  },
+  {
+    "id": 9,
+    "title": "Give the bachelor a small gift",
+    "rewardExp": 50,
+    "isComplete": false
+  },
+  {
+    "id": 10,
+    "title": "Make a toast to the bachelor",
+    "rewardExp": 50,
+    "isComplete": false
+  },
+  {
+    "id": 11,
+    "title": "Invite the bachelor to join you for a game",
+    "rewardExp": 50,
+    "isComplete": false
+  },
+  {
+    "id": 12,
+    "title": "Share a joke with the bachelor",
+    "rewardExp": 50,
+    "isComplete": false
+  }
+]

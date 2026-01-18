@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import Quests from '@/data/quests.json'
+import Tasks from '@/data/tasks.json'
 import { levelSystem } from '@/composables/levelingSystem.js'
 
 export const usePlayerStore = defineStore('player', {
@@ -13,7 +14,8 @@ export const usePlayerStore = defineStore('player', {
     currentQuest: null,
     questsCompleted: [],
     tasksCompleted: [],
-    allQuests: [...Quests]
+    allQuests: [...Quests],
+    allTasks: [...Tasks],
   }),
 
   getters: {
@@ -43,7 +45,8 @@ export const usePlayerStore = defineStore('player', {
     },
 
     setCurrentQuest(questId) {
-      this.currentQuest = this.allQuests.find(quest => quest.id === questId) || null
+      this.currentQuest = this.allQuests.find(quest => quest.id == questId)
+      console.log("Current from player.js", this.currentQuest);
       localStorage.setItem('currentQuest', questId)
     },
 
@@ -74,9 +77,27 @@ export const usePlayerStore = defineStore('player', {
       this.awardPoints(1)
     },
 
-    addCompletedQuest(questId) {
+    completeQuest(questId) {
       if (!this.questsCompleted.includes(questId)) {
         this.questsCompleted.push(questId)
+        localStorage.setItem('questsCompleted', JSON.stringify(this.questsCompleted))
+        //award points for completing quest
+        const quest = this.allQuests.find(q => q.id == questId)
+        if (quest) {
+          this.awardPoints(quest.rewardExp)
+          alert("Quest Completed! You earned " + quest.rewardExp + " points.");
+        }
+        //quest was completed so reset currentQuest
+        this.currentQuest = null
+        localStorage.removeItem('currentQuest')
+      }
+    },
+
+    completeTask(task) {
+      if (!this.tasksCompleted.includes(task.id)) {
+        this.tasksCompleted.push(task.id)
+        localStorage.setItem('tasksCompleted', JSON.stringify(this.tasksCompleted))
+        this.awardPoints(task.rewardExp)
       }
     },
 
@@ -97,6 +118,16 @@ export const usePlayerStore = defineStore('player', {
       if (savedCurrentQuest) {
         this.setCurrentQuest(savedCurrentQuest)
       }
-    }
+
+      const savedQuestsCompleted = localStorage.getItem('questsCompleted')
+      if (savedQuestsCompleted) {
+        this.questsCompleted = JSON.parse(savedQuestsCompleted)
+      }
+
+      const savedTasksCompleted = localStorage.getItem('tasksCompleted')
+      if (savedTasksCompleted) {
+        this.tasksCompleted = JSON.parse(savedTasksCompleted)
+      }
   }
-})
+  }}
+)

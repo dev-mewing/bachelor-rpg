@@ -8,6 +8,7 @@ import Quests from '../pages/Quests.vue'
 import Agenda from '../pages/Agenda.vue'
 import Details from '../pages/Details.vue'
 import NotFound from '../pages/NotFound.vue'
+import Tasks from '@/pages/Tasks.vue'
 
 
 const routes = [
@@ -56,6 +57,11 @@ const routes = [
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: NotFound,
+  },
+  {
+    path: '/tasks',
+    name: 'tasks',
+    component: Tasks,
   }
 ]
 

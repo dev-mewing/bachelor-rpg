@@ -1,5 +1,6 @@
 <script setup>
   import { usePlayerStore } from '../../stores/player'
+  import { computed } from 'vue'
   const playerStore = usePlayerStore()
 
   const testProgress = "50";
@@ -8,6 +9,11 @@
     playerStore.loadFromStorage()
   }
   loadPlayerData()
+
+  const currentQuestTitle = computed(() => {
+    return playerStore.currentQuest ? playerStore.currentQuest.title : 'N/A';
+  });
+
 </script>
 <template>
   <section id="user-info" role="presentation">
@@ -15,7 +21,7 @@
     <div class="player-name">{{ playerStore.name }}</div>
     <div class="player-points">
       <span class="score">CURRENT QUEST</span><br>
-      <span class="score">{{ playerStore.currentQuest ? playerStore.currentQuest.title : 'N/A' }}</span><br>
+      <span class="score">{{ currentQuestTitle }}</span><br>
       <span class="score">SCORE</span><br>
       <span class="points">{{ playerStore.points }}</span>&nbsp;
       <span class="fa fa-ruble"></span>
@@ -29,10 +35,21 @@
       </div>
     </div>
     <div class="level-up">
+      <span class="score">{{ playerStore.xpToNextLevel }} XP to next</span>
       <div class="level-up-indicator">
         <div class="level-up-fill" :style="{ width: playerStore.levelProgress + '%' }"></div>
          <!-- <div class="level-up-fill" :style="{ width: testProgress + '%' }"></div> -->
       </div>
+    </div>
+  </div>
+  <div class="completions">
+    <div class="quests-completed">
+      <span class="score">Quests</span>
+      <span>{{ playerStore.questsCompleted.length }}</span>
+    </div>
+    <div class="tasks-completed">
+      <span class="score">Tasks</span>
+      <span>{{ playerStore.tasksCompleted.length }}</span>
     </div>
   </div>
   </section>
@@ -101,6 +118,8 @@
 
   .level-up {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: #fff;
     padding: 0 1rem;
@@ -121,6 +140,27 @@
     height: 100%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+  }
+
+  .completions {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
+
+  .completions div {
+    box-shadow: var(--shadow-panel);
+    background-color: #fff;
+    border-radius: 8px;
+  }
+
+  .tasks-completed,
+  .quests-completed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 0;
   }
 
 </style>

@@ -7,12 +7,20 @@
   const route = useRoute();
   const questId = route.params.id;
   const questDetail = Quests.filter(q => q.id == questId);
+  const playerStore = usePlayerStore();
 
-  const setCurrentQuest = () => {
-    const playerStore = usePlayerStore();
-    playerStore.setCurrentQuest(questDetail[0].id);
-    // alert('Quest set as active quest!');
-  };
+  console.log("quest detail from Details", questDetail);
+
+  const loadPlayerData = () => {
+    playerStore.loadFromStorage();
+  }; 
+
+  onMounted(() => {
+    loadPlayerData();
+  });
+
+ const completedQuests = playerStore.questsCompleted;
+ console.log("Completed from Details", completedQuests);
 
 </script>
 <template>
@@ -26,9 +34,10 @@
       <p><strong>Time:</strong> {{ questDetail[0].time }} - {{ questDetail[0].endTime }}</p>
       <p><strong>Location:</strong> {{ questDetail[0].location }}</p>
       <p><strong>Reward:</strong> {{ questDetail[0].rewardExp }} points</p>
-      <div class="setActiveQuest">
-        <button type="button" @click="setCurrentQuest">Set Active Quest</button>
+      <div class="setActiveQuest" v-if="!completedQuests.includes(questDetail[0].id)">
+        <button type="button" @click="playerStore.setCurrentQuest(questDetail[0].id)">Set Active Quest</button>
       </div>
+      <div class="completed" v-else>Completed</div>
     </div>
     <div v-else>
       <p>No quest found. Go to the Quest List to get it's details.</p>
@@ -50,5 +59,13 @@
   .back {
     display: flex;
     justify-content: flex-end;
+  }
+  .completed {
+    font-weight: bold;
+    color: #065004;
+    background-color: gold;
+    padding: 0.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
   }
 </style>

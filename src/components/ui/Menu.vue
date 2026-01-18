@@ -15,6 +15,7 @@
       <li><a href="/">Home</a></li>
       <li><a href="/dashboard">Dashboard</a></li>
       <li><a href="/quests">Quests</a></li>
+      <li><a href="/tasks">Tasks</a></li>
       <li><button type="button" @click="$emit('close')">
         <span class="fa fa-close" title="Close menu"></span>
       </button></li>
