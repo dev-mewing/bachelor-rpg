@@ -26,12 +26,12 @@ onMounted(() => {
   <div class="container" style="height: 100vh;">
     <div class="login-form">
       <img src="../assets/images/brand/bachelor-rpg-logo-trans.png" alt="Bachelor RPG Logo" width="220" />
-      <h1>Celebrating<br>Mitch!</h1>
+      <h1>Let's Celebrate<br>Mitch!</h1>
       <div class="field">
         <label for="login-name">Adventurer name:</label>
         <input type="text" id="login-name" name="login-name" v-model="name" placeholder="Will the Wise" />
       </div>
-      <button @click="login">Begin Quest</button>
+      <button type="button" @click="login">Begin Quest</button>
     </div>
   </div>
 </template>
