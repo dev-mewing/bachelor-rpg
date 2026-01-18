@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import Quests from '@/data/quests.json'
+import { levelSystem } from '@/composables/levelingSystem.js'
 
 export const usePlayerStore = defineStore('player', {
   state: () => ({
@@ -15,6 +16,22 @@ export const usePlayerStore = defineStore('player', {
     allQuests: [...Quests]
   }),
 
+  getters: {
+
+    levelInfo() {
+      return levelSystem.getLevelInfo(this.xp, this.level);
+    },
+
+    levelProgress() {
+      return this.levelInfo.progress;
+    },
+
+    xpToNextLevel() {
+      return this.levelInfo.xpNeededForNext - this.levelInfo.xpIntoCurrentLevel;
+    }
+
+  },
+
   actions: {
     setName(name) {
       this.name = name
@@ -29,11 +46,28 @@ export const usePlayerStore = defineStore('player', {
     awardPoints(points) {
       this.points += points
       localStorage.setItem('playerPoints', this.points)
+
+      this.awardXp(points)
     },
 
     awardXp(xp) {
+      const oldLevel = this.level
       this.xp += xp
+
+      const levelInfo = levelSystem.getLevelInfo(this.xp, oldLevel);
+
+      if (levelInfo.leveledUp) {
+        this.level = levelInfo.level;
+        console.log("Leveled up to level " + this.level + "!");
+      }
+
       localStorage.setItem('playerXp', this.xp)
+      localStorage.setItem('playerLevel', this.level)
+
+    },
+
+    addClickPoints() {
+      this.awardPoints(1)
     },
 
     addCompletedQuest(questId) {
@@ -51,6 +85,9 @@ export const usePlayerStore = defineStore('player', {
 
       const savedXp = localStorage.getItem('playerXp')
       if (savedXp) this.xp = parseInt(savedXp)
+
+      const savedLevel = localStorage.getItem('playerLevel')
+      if (savedLevel) this.level = parseInt(savedLevel)
 
       const savedCurrentQuestId = localStorage.getItem('currentQuestId')
       if (savedCurrentQuestId) {

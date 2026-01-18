@@ -28,8 +28,8 @@
     </div>
     <div class="level-up">
       <div class="level-up-indicator">
-        <!-- <div class="level-up-fill" :style="{ width: playerStore.levelProgress + '%' }"></div> -->
-         <div class="level-up-fill" :style="{ width: testProgress + '%' }"></div>
+        <div class="level-up-fill" :style="{ width: playerStore.levelProgress + '%' }"></div>
+         <!-- <div class="level-up-fill" :style="{ width: testProgress + '%' }"></div> -->
       </div>
     </div>
   </div>

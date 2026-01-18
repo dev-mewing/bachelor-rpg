@@ -18,7 +18,7 @@ loadPlayerData()
     <!-- <div class="play-area">
       <div class="monster-area"></div>
     </div> -->
-    <button @click="playerStore.awardPoints(1)" class="rpg-btn">Tap</button>
+    <button @click="playerStore.addClickPoints()" class="rpg-btn">Tap</button>
   </section>
 </template>
 <style scoped>
