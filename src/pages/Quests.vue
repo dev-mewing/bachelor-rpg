@@ -59,4 +59,12 @@
   .tabs button:hover {
     transform: unset;
   }
+  button.tab-btn {
+    width: 100%;
+  }
+
+  button.tab-btn.active {
+    background-color: purple;
+    color: #fff;
+  }
 </style>
