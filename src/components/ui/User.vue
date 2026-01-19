@@ -23,7 +23,7 @@
       <span class="score">CURRENT QUEST</span><br>
       <span class="score">{{ currentQuestTitle }}</span><br>
       <span class="score">SCORE</span><br>
-      <span class="points">{{ playerStore.points }}</span>&nbsp;
+      <span class="points">{{ playerStore.points.toLocaleString('en-US') }}</span>&nbsp;
       <span class="fa fa-ruble"></span>
     </div>
   </div>

@@ -7,8 +7,9 @@ import TapGame from '@/components/quests/TapGame.vue';
   <div id="dashboard" class="container" style="height: 100vh;">
     <div class="stack-md">
       <h1>Dashboard</h1>
-      <User />
+      <hr />
       <p>Check your current quest. Prepare your equipment or level up. Train your skills and accumulate points with the Tap Game.</p>
+      <User />
       <TapGame />
     </div>
   </div>

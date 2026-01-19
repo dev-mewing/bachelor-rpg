@@ -14,7 +14,7 @@ loadPlayerData()
 </script>
 
 <template>
-  <section class="rpg-btn-area">
+  <section class="container rpg-btn-area">
     <!-- <div class="play-area">
       <div class="monster-area"></div>
     </div> -->
@@ -25,7 +25,7 @@ loadPlayerData()
 </template>
 <style scoped>
   .rpg-btn-area {
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     bottom: 1rem;
@@ -40,7 +40,7 @@ loadPlayerData()
   font-weight: 600;
   letter-spacing: 0.5px;
   width: 100%;
-  max-width: 300px;
+  /* max-width: 300px; */
 
   background: linear-gradient(180deg, rgba(59, 47, 47), rgba(47, 36, 36));
   color: #f5e6c8;

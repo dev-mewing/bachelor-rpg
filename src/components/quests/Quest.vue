@@ -10,7 +10,7 @@
   const completeThisQuest = () => {
     if (playerStore.currentQuest) {
       playerStore.completeQuest(playerStore.currentQuest.id);
-      alert('Quest completed! You earned ' + playerStore.currentQuest.rewardExp + ' experience points.');
+      // alert('Quest completed! You earned ' + playerStore.currentQuest.rewardExp + ' experience points.');
       //award experience points or other rewards here if needed
       // playerStore.awardPoints(playerStore.currentQuest.rewardExp);
     }

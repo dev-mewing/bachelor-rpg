@@ -69,6 +69,12 @@
     margin-bottom: 1rem;
   }
 
+  button {
+    width: 100%;
+    height: 40px;
+    margin: 1rem auto;
+  }
+
   img {
     max-width: 100%;
     height: auto;
